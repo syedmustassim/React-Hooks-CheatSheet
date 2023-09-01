@@ -1,5 +1,6 @@
 import "./styles.css";
 import RandomNumberGenerator from "./useRef/RandomNumberCounter";
+import RenderCount from "./useRef/RenderCounter";
 import UseRefHook from "./useRef/UseRefHook";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <h1>React Hooks CheatSheet</h1>
       <UseRefHook />
       <RandomNumberGenerator />
+      <RenderCount/>
     </div>
   );
 }
