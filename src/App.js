@@ -1,4 +1,5 @@
 import "./styles.css";
+import UseMemoOne from "./useMemo/UseMemoOne";
 import RandomNumberGenerator from "./useRef/RandomNumberCounter";
 import RenderCount from "./useRef/RenderCounter";
 import Timer from "./useRef/Timer";
@@ -11,7 +12,8 @@ export default function App() {
       {/* <UseRefHook />
       <RandomNumberGenerator />
       <RenderCount/> */}
-      <Timer/>
+      {/* <Timer/> */}
+      <UseMemoOne/>
     </div>
   );
 }
