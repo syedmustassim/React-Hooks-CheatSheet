@@ -4,7 +4,12 @@ const Home = () => {
     return(
         <div>
             <h1> Mustassim's React Hooks CheatSheet! </h1>
-            <Link to="/useref"> useRef Hook </Link>
+            <div>
+                <Link to="/useref"> useRef Hook </Link>
+            </div>
+            <div>
+                <Link to="/usememo"> useMemo Hook </Link>
+            </div>
         </div>
     )
 }
