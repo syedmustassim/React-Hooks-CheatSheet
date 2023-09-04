@@ -1,6 +1,7 @@
 // Referencing a DOM element
 
 import { useState, useRef } from "react";
+import {Link} from "react-router-dom"
 
 const UseRefHook = () => {
   const [name, setName] = useState("");
@@ -12,6 +13,9 @@ const UseRefHook = () => {
   };
   return (
     <div>
+      <Link to="/useref">Back to useRef hook</Link>
+      <h3> Input element focus using useRef </h3>
+      <div>
       <input
         ref={inputEl}
         type="text"
@@ -20,6 +24,7 @@ const UseRefHook = () => {
       />
       <button onClick={resetInput}>Reset</button>
       <p>My name is {name}</p>
+      </div>
     </div>
   );
 };

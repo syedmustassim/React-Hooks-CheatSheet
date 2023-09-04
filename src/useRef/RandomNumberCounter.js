@@ -1,6 +1,7 @@
 // Used for Storing previous state values and hold a mutable value to prevent re-render
 
 import { useState, useRef, useEffect } from "react";
+import {Link } from "react-router-dom"
 
 const RandomNumberGenerator = () => {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ const RandomNumberGenerator = () => {
   };
   return (
     <div>
+      <Link to="/useref">Back to useRef hook</Link>
       <h1> Random Number: {count} </h1>
       <button onClick={generateNum}> Generate Number</button>
       {typeof previousValue.current !== "undefined" && (

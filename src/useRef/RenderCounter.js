@@ -3,6 +3,7 @@
 // (Note: DO NOT USE USESTATE, WILL END UP CAUSING INIFINTE RENDERS LOL)
 
 import {useState, useEffect, useRef} from "react";
+import {Link} from "react-router-dom"
 
 const RenderCount = () => {
 
@@ -14,6 +15,7 @@ const RenderCount = () => {
     }, [game])
     return(
         <div>
+        <Link to="/useref">Back to useRef hook</Link>
          <h1> Render Count </h1>
          <input type="text" onChange={e => setGame(e.target.value)}/>
          <h1>Selected game is - {game}</h1>

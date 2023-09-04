@@ -1,6 +1,9 @@
 import {Routes, Route} from "react-router-dom"
 import Home from "../Home"
 import UseRefPage from "../Pages/UseRefPage";
+import RandomNumberGenerator from "../useRef/RandomNumberCounter";
+import RenderCount from "../useRef/RenderCounter";
+import UseRefHook from "../useRef/UseRefHook";
 
 const AppRouter = () => {
     return(
@@ -8,7 +11,9 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/useref" element={<UseRefPage/>} />
-
+                <Route path="/useref/randomcounter" element={<RandomNumberGenerator/>} />
+                <Route path="/useref/rendercounter" element={<RenderCount/>} />
+                <Route path="/useref/refjsxelement" element={<UseRefHook/>} />
             </Routes>
 
         </div>
