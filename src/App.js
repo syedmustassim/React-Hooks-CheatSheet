@@ -1,3 +1,4 @@
+import Home from "./Home";
 import "./styles.css";
 import UseMemoOne from "./useMemo/UseMemoOne";
 import RandomNumberGenerator from "./useRef/RandomNumberCounter";
@@ -8,7 +9,7 @@ import UseRefHook from "./useRef/UseRefHook";
 export default function App() {
   return (
     <div className="App">
-      <h1>React Hooks CheatSheet</h1>
+      <Home/>
       {/* <UseRefHook />
       <RandomNumberGenerator />
       <RenderCount/> */}
