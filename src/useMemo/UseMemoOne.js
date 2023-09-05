@@ -24,13 +24,33 @@ const UseMemoOne = () => {
     // const result = factorial(count)
 
     const [name, setName] = useState("")
+    const factorialString = factorial.toString();
     return(
         <div>
-        <h1> Factorial of {count} = {result}</h1>
+        <h1> Heavy function memoization </h1>
+        <p> Memoization: Memoization is an optimization technique used in programming to improve the performance of functions by caching the results of expensive function calls and returning the cached result when the same inputs occur again. This can help reduce redundant computations and speed up the execution of code, especially in scenarios where a function is called with the same arguments multiple times.</p>
+   
+
+        <h3> Brief Explanation </h3>
+        <p> We take two functionalities here. </p>
+        <p>  A counter and an input box that sets a name. </p>
+        <p> The aim here is to memoize one functionality. </p>
+        <p> We make the factorial function heavy, which leads to longer load times / heavy computation </p>
+        <pre> {factorialString}</pre>
+        <p> By adding the while loop above, we make the function slow. </p>
+        <p> We maintain a state variable that will be updated everytime it's factorial is to be calculated. </p>
+        <p> This leads to the entire component being re-rendered and it will be slow. </p>
+        <p> The catch with memoization and all of this, is that eventhough it is only the factorial function that is heavy, the entire component will become slow because of this. </p>
+        <p> When we try to enter anything it in the input box, even that will take time. Hence, to avoid this, we memoize the heavy function. </p>
+        <p> useMemo will be used with the result where we call the factorial function </p>
+        <img src="https://i.postimg.cc/T2Vmz1xn/Screenshot-188.png" alt="memo-result" />
+        <p> This is what helps us. </p>
+        <p> Demo below. </p>
+        <h3> Factorial of {count} = {result}</h3>
         <button onClick={() => setCount(prev => prev + 1)}>Increment</button>
         <button onClick={() => setCount(prev => prev - 1)}>Decrement</button>
         <hr/>
-        <h2> Input operation: </h2>
+        <h3> Input operation: </h3>
         <input type="text" placeholder="enter name" value={name} onChange={e => setName(e.target.value)} />
         <h3> My name is {name} </h3>
 
