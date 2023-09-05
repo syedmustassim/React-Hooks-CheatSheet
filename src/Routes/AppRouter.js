@@ -2,6 +2,7 @@ import {Routes, Route} from "react-router-dom"
 import Home from "../Home"
 import UseMemoPage from "../Pages/UseMemoPage";
 import UseRefPage from "../Pages/UseRefPage";
+import UseMemoOne from "../useMemo/UseMemoOne";
 import RandomNumberGenerator from "../useRef/RandomNumberCounter";
 import RenderCount from "../useRef/RenderCounter";
 import UseRefHook from "../useRef/UseRefHook";
@@ -16,6 +17,7 @@ const AppRouter = () => {
                 <Route path="/useref/rendercounter" element={<RenderCount/>} />
                 <Route path="/useref/refjsxelement" element={<UseRefHook/>} />
                 <Route path="/usememo" element={<UseMemoPage/>} />
+                <Route path="/usememo/example1" element={<UseMemoOne/>} />
             </Routes>
 
         </div>

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 const UseMemoPage = () => {
     return(
         <div>
@@ -12,6 +14,8 @@ const UseMemoPage = () => {
                 <li>Optimize expensive operations</li>
                 <li>Referential Equality </li>
             </ul>
+            <h3>Example: </h3>
+            <Link to="/usememo/example1">Heavy function memoization</Link>
         </div>
     )
 }
