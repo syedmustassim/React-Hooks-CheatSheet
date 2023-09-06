@@ -3,6 +3,7 @@ import Home from "../Home"
 import UseCallbackPage from "../Pages/UseCallbackPage";
 import UseMemoPage from "../Pages/UseMemoPage";
 import UseRefPage from "../Pages/UseRefPage";
+import ChangeTheme from "../useCallback/ChangeTheme";
 import UseMemoOne from "../useMemo/UseMemoOne";
 import RandomNumberGenerator from "../useRef/RandomNumberCounter";
 import RenderCount from "../useRef/RenderCounter";
@@ -20,6 +21,7 @@ const AppRouter = () => {
                 <Route path="/usememo" element={<UseMemoPage/>} />
                 <Route path="/usememo/example1" element={<UseMemoOne/>} />
                 <Route path="/usecallback" element={<UseCallbackPage/>} />
+                <Route path="/usecallback/changetheme" element={<ChangeTheme/>} />
             </Routes>
 
         </div>
