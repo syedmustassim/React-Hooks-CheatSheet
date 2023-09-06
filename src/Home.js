@@ -10,6 +10,9 @@ const Home = () => {
             <div>
                 <Link to="/usememo"> useMemo Hook </Link>
             </div>
+             <div>
+                <Link to="/usecallback"> useCallback Hook </Link>
+            </div>
         </div>
     )
 }
