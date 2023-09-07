@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useCallback} from "react"
 import List from "./List";
 const ChangeTheme = () => {
     const [number, setNumber] = useState(0);
@@ -9,9 +9,9 @@ const ChangeTheme = () => {
         color: dark ? "#FFF" : "#333"
     }
 
-    const getItems = () => {
+    const getItems = useCallback(() =>  {
         return [number, number + 1, number + 2]
-    }
+    },[number])
     return(
         <div style={theme}>
             <h1> Change theme example for useCallback </h1>
