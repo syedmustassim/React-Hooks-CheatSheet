@@ -1,5 +1,6 @@
 import React, { Suspense} from "react"
 import {Routes, Route} from "react-router-dom"
+import Loading from "../Loader/Loading";
 const Home = React.lazy(() => import("../Home"))
 const UseCallbackPage = React.lazy(() => import ("../Pages/UseCallbackPage"));
 const UseMemoPage = React.lazy(() => import ("../Pages/UseMemoPage"));
@@ -13,7 +14,7 @@ const UseRefHook = React.lazy(() => import("../useRef/UseRefHook"));
 const AppRouter = () => {
     return(
         <div>
-            <Suspense fallback={<h1> ...Loading </h1>}>
+            <Suspense fallback={<Loading/>}>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/useref" element={<UseRefPage/>} />

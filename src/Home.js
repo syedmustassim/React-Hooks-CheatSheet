@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import Loading from "./Loader/Loading";
 
 const Home = () => {
     return(

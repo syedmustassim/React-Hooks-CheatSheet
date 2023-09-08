@@ -1,0 +1,33 @@
+.loader{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.earth{
+    width: 150px;
+    height: 150px;
+    background-color: #6b93d6;
+    border-radius: 50%;
+    position: relative;
+    animation: moon-revolution linear 5s infinite;
+}
+
+.moon {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+}
+
+@keyframes moon-revolution {
+    0% {
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
