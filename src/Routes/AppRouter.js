@@ -1,17 +1,19 @@
+import React, { Suspense} from "react"
 import {Routes, Route} from "react-router-dom"
-import Home from "../Home"
-import UseCallbackPage from "../Pages/UseCallbackPage";
-import UseMemoPage from "../Pages/UseMemoPage";
-import UseRefPage from "../Pages/UseRefPage";
-import ChangeTheme from "../useCallback/ChangeTheme";
-import UseMemoOne from "../useMemo/UseMemoOne";
-import RandomNumberGenerator from "../useRef/RandomNumberCounter";
-import RenderCount from "../useRef/RenderCounter";
-import UseRefHook from "../useRef/UseRefHook";
+const Home = React.lazy(() => import("../Home"))
+const UseCallbackPage = React.lazy(() => import ("../Pages/UseCallbackPage"));
+const UseMemoPage = React.lazy(() => import ("../Pages/UseMemoPage"));
+const UseRefPage = React.lazy(() => import("../Pages/UseRefPage"));
+const ChangeTheme = React.lazy(() => import("../useCallback/ChangeTheme"));
+const UseMemoOne = React.lazy(() => import("../useMemo/UseMemoOne")) ;
+const RandomNumberGenerator = React.lazy(() => import("../useRef/RandomNumberCounter"));
+const RenderCount = React.lazy(() => import("../useRef/RenderCounter"));
+const UseRefHook = React.lazy(() => import("../useRef/UseRefHook"));
 
 const AppRouter = () => {
     return(
         <div>
+            <Suspense fallback={<h1> ...Loading </h1>}>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/useref" element={<UseRefPage/>} />
@@ -23,7 +25,7 @@ const AppRouter = () => {
                 <Route path="/usecallback" element={<UseCallbackPage/>} />
                 <Route path="/usecallback/changetheme" element={<ChangeTheme/>} />
             </Routes>
-
+            </Suspense>
         </div>
     )
 }
