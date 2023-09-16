@@ -24,6 +24,7 @@ const ChangeTheme = () => {
             <p>Notice here that the useEffect render does not change when I try to toggle the theme.</p>
             <p>It only changes when I enter a number into the input box.</p>
             <p>This is basically how useCallback has actually helped us to memoize the functions inside our component, that generates the list.</p>
+            <button>Check without useCallback</button>
         </div>
     )
 }
