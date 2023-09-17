@@ -18,6 +18,10 @@ const RandomNumberGenerator = () => {
   return (
     <div>
       <Link to="/useref">Back to useRef hook</Link>
+      <h1>The Random Number generator</h1>
+      <p>The component here generates a random number between 0 and 1000.</p>
+      <p>useRef hook here is used to keep track of the previous state value. That is, the previous random number
+        that was generated. </p>
       <h1> Random Number: {count} </h1>
       <button onClick={generateNum}> Generate Number</button>
       {typeof previousValue.current !== "undefined" && (
