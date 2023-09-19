@@ -15,6 +15,9 @@ const UseRefHook = () => {
     <div>
       <Link to="/useref">Back to useRef hook</Link>
       <h3> Input element focus using useRef </h3>
+      <p> Here, we use the useRef hook along with the focus() property, to select a JSX element.</p>
+      <p>Once you input your name in the input field and click on reset, it resets the input and then focuses on the input field again.</p>
+      <p>Go ahead, try it out yourself!</p>
       <div>
       <input
         ref={inputEl}
